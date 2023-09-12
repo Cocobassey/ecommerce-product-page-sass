@@ -1,0 +1,21 @@
+
+@mixin medium-screen($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin sm-md($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin small($min-size, $max-size) {
+    @media (min-width: $min-size) and (max-width: $max-size) {
+        @content;
+    }
+}
+
+
+
