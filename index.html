@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="/sass/style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      
+      <!-- mobile view nav bar -->
+
+       <div class="mobile-nav">
+          <div class="hambuger-menu">
+            <img src="images/icon-menu.svg" alt="hambuger menu for mobile use">
+          </div>
+          
+          <div class="mobile-nav-items">
+            <div class="close-btn">
+              <img src="images/icon-close.svg" alt="close button">
+            </div>
+            <ul class="nav-list">
+              <li><a href="#"> Collections </a></li>
+              <li><a href="#"> Men </a></li>
+              <li><a href="#"> Women  </a></li>
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> Contact </a></li>
+            </ul>
+          </div>
+        </div>   <!-- end of mobile view nav bar -->
+
+      <div class="nav-content1">
+        <a href="index.html"><img src="images/logo.svg" alt="website logo"></a>
+        <span class="nav-items">
+          <a href="#"> Collections </a>
+          <a href="#"> Men </a>
+          <a href="#"> Women </a>
+          <a href="#"> About </a>
+          <a href="#"> Contact </a>
+        </span>
+      </div>
+
+      <div class="nav-content2">
+        <span class="icon"> 
+          <i><img src="images/icon-cart.svg" alt="shopping cart icon"></i>
+        </span>
+
+        <span class="profile-img">
+          <img src="images/image-avatar.png" alt="user image">
+        </span>
+      </div>
+    
+      
+
+      <!-- Overlay structure start -->
+        <div class="overlay-cart"> <!-- == d-block height == remove d-block and height class from html --> 
+          <h4> Cart </h4>
+          <div class="cart-content-box">
+            <div class="empty-cart show"> Your cart is empty </div>
+            <div class="full-cart-details">
+              <div class="cart-info center">
+                <img src="images/image-product-1-thumbnail.jpg" alt="">
+                <div class="price-details">
+                  <p> Fall Limited Edition Sneakers </p>
+                  $150.00  x <span id="quantity"> 3 </span> <span id="total"> $450.00 </span>
+                </div>
+                <img class="delete-icon" src="images/icon-delete.svg" alt="trash bin">
+              </div>
+              <button class="btn"> Checkout </button>
+            </div>
+          </div>
+        </div>  <!-- Overlay structure end -->
+    </nav>
+  </div>
+
+  <main role="main">
+    <section class="flex-main">
+      <section class="img-side">
+        <div class="image-wrap">
+          <div class="big-img">
+            <img class="img-1 active" src="images/image-product-1.jpg" alt="">
+          </div>
+          <div class="small-imgs">
+            <a href="#img1"><img class="img-1" src="images/image-product-1.jpg" alt="" width="85"></a>
+            <a href="#img2"><img class="img-2" src="images/image-product-2.jpg" alt="" width="85"></a>
+            <a href="#img3"><img class="img-3" src="images/image-product-3.jpg" alt="" width="85"></a>
+            <a href="#img4"><img class="img-4" src="images/image-product-4.jpg" alt="" width="85"></a>
+          </div>
+        </div>
+        
+    
+
+        <div class="thumbnail-box" id="img1">
+          <div class="thumbnail-content">
+            <a href="#" class="close"><img class="close-cross" src="images/icon-close.svg" alt=""></a>
+            <button class="prev-btn">
+              <img src="images/icon-previous.svg" alt="previous image button">
+            </button>
+            <button class="next-btn">
+              <img src="images/icon-next.svg" alt="next image button">
+            </button>
+            <img class="thumbnail-small active-thumbnail" src="images/image-product-1.jpg" alt="" data-tab="1">
+          </div>
+        </div> 
+
+        <div class="thumbnail-box" id="img2">
+          <div class="thumbnail-content">
+            <a href="#" class="close"><img class="close-cross" src="images/icon-close.svg" alt=""></a>
+            <button class="prev-btn">
+              <img src="images/icon-previous.svg" alt="previous image button">
+            </button>
+            <button class="next-btn">
+              <img src="images/icon-next.svg" alt="next image button">
+            </button>
+            <img class="thumbnail-small" src="images/image-product-2.jpg" alt="" data-tab="2">
+          </div>
+        </div>
+
+        <div class="thumbnail-box" id="img3">
+          <div class="thumbnail-content">
+            <a href="#" class="close"><img class="close-cross" src="images/icon-close.svg" alt=""></a>
+            <button class="prev-btn">
+              <img src="images/icon-previous.svg" alt="previous image button">
+            </button>
+            <button class="next-btn">
+              <img src="images/icon-next.svg" alt="next image button">
+            </button>
+            <img class="thumbnail-small" src="images/image-product-3.jpg" alt="" data-tab="2">
+          </div>
+        </div>
+        
+        <div class="thumbnail-box" id="img4">
+          <div class="thumbnail-content">
+            <a href="#" class="close"><img class="close-cross" src="images/icon-close.svg" alt=""></a>
+            <button class="prev-btn">
+              <img src="images/icon-previous.svg" alt="previous image button">
+            </button>
+            <button class="next-btn">
+              <img src="images/icon-next.svg" alt="next image button">
+            </button>
+            <img class="thumbnail-small" src="images/image-product-4.jpg" alt="" data-tab="4">
+          </div>
+        </div>
+
+      </section>
+
+      <section class="text-side">
+        <h3> sneaker company </h3>
+        <h1 class="lead-heading"> Fall Limited Edition Sneakers </h1>
+        <p class="description"> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+          they'll withstand everything the weather can offer. </p>
+        
+        <div class="main-price">
+          <div class="price">$125.00 <span>50%</span></div>
+          <div class="old-price"> <del>$250.00</del></div>
+        </div>
+
+        <div class="btn-quantity">
+          <div class="number-box">
+            <button id="decrease">
+              <img src="images/icon-minus.svg" alt="icon-minus">
+            </button>
+            <span id="quantity"> 0 </span>
+            <button id="increase">
+              <img src="images/icon-plus.svg" alt="icon-plus">
+            </button>
+          </div>
+
+          <button class="btn">
+            <span>
+              <!-- <img src="images/icon-cart.svg" alt=""> -->
+              <svg class="h-logo" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+                <path id="btn-icon"
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#69707D" fill-rule="nonzero" />
+              </svg>
+            </span>
+            Add to cart
+          </button>
+        </div>
+      </section>
+  
+    </section>
+  </main> 
+
+
+  <section class="bg-effects">
+    <div class="slider-container">
+      <div class="hero-slides">
+        <div class="slider">
+            <div class="slide"><img src="images/image-product-1.jpg" alt="Photo 1"></div>
+            <div class="slide"><img src="images/image-product-2.jpg" alt="Photo 2"></div>
+            <div class="slide"><img src="images/image-product-3.jpg" alt="Photo 3"></div>
+            <div class="slide"><img src="images/image-product-4.jpg" alt="Photo 4"></div>
+        </div>
+        <button class="slider__btn slider__btn--left " aria-label="left align">
+          <img class="same" src="images/icon-previous.svg" alt="previous button">
+        </button>
+    
+        <button class="slider__btn slider__btn--right" aria-label="right align">
+          <img class="same" src="images/icon-next.svg" alt="next button">
+          <!-- width="13" height="18" -->
+        </button>
+      </div>
+  
+      <div class="overlay-bg"></div>
+    </div>
+    
+
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Cococodes</a>.
+  </div>
+</body>
+</html>
